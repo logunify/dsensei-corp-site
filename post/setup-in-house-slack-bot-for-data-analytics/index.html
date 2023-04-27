@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
   
-  <title>DSensei  | Posts </title>
+  <title>DSensei  | Setup Your in House AI Slack Bot for Data Analytics in Natural Language </title>
 
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta name="description" content="UThe Open Source AI Slack Bot for Data Analytics in Natural Language. Unlock the power of your data with DSensei that makes data analytics accessible for everyone." />
+  <meta name="description" content="Unlock the power of your data with DSensei that makes data analytics accessible for everyone." />
 
   
   
@@ -50,11 +50,14 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.dsensei.dev/images/hero-image-external.png"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="UThe Open Source AI Slack Bot for Data Analytics in Natural Language. Unlock the power of your data with DSensei that makes data analytics accessible for everyone."/>
+<meta name="twitter:title" content="Setup Your in House AI Slack Bot for Data Analytics in Natural Language"/>
+<meta name="twitter:description" content="Unlock the power of your data with DSensei that makes data analytics accessible for everyone."/>
 
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="UThe Open Source AI Slack Bot for Data Analytics in Natural Language. Unlock the power of your data with DSensei that makes data analytics accessible for everyone.">
+<meta itemprop="name" content="Setup Your in House AI Slack Bot for Data Analytics in Natural Language">
+<meta itemprop="description" content="Unlock the power of your data with DSensei that makes data analytics accessible for everyone.">
+
+<meta itemprop="wordCount" content="1447"><meta itemprop="image" content="https://www.dsensei.dev/images/hero-image-external.png"/>
+<meta itemprop="keywords" content="" />
 
 
 
@@ -156,7 +159,6 @@
 
 
   
-  <link rel="alternate" type="application/rss+xml" href="https://www.dsensei.dev/post/index.xml" title="DSensei" />
   </head>
 
   <body><nav class="navbar navbar-expand-xl navbar-light bg-light">
@@ -203,55 +205,236 @@
     </div>
   </div>
 </nav>
-  <section class="section blog-list py-5">
+  <section class="section blog-single py-5">
     <div class="container">
       <div class="row justify-content-center pb-5">
-        <div class="col-12 col-xl-6">
+        <div class="col-12">
           
-            <h2 class="fs-1 fw-bold text-center text-primary pb-3">Posts</h2>
+            <h2 class="display-3 fw-bold text-center text-primary pb-3">Setup Your in House AI Slack Bot for Data Analytics in Natural Language</h2>
           
+          
+            <p class="text-black-61 fs-3 text-center pb-3">Unlock the power of your data with DSensei that makes data analytics accessible for everyone.</p>
           
         </div>
-      </div>
-      <div class="row g-4 pb-5">
-        
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="card text-decoration-none h-100" href="https://www.dsensei.dev/post/rational-of-dsensei/">
-            <div class="aspect-ratio-62-5">
-              
-                
-  <img class="" src="https://www.dsensei.dev/images/hero-image-external.png" alt="images/hero-image-external.png" width="1328" height="884">
-
-
-              
-            </div>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Rationale of DSensei</h5>
-              <p class="card-text text-black-61">In today’s data-driven world, having efficient access to data and analytics is critical for success. However, making data accessible to everyone can be a challenge because raw data is typically not readily consumable.</p>
-            </div>
-          </a>
-        </div>
-        
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="card text-decoration-none h-100" href="https://www.dsensei.dev/post/setup-in-house-slack-bot-for-data-analytics/">
-            <div class="aspect-ratio-62-5">
-              
-                
-  <img class="" src="https://www.dsensei.dev/images/hero-image-external.png" alt="images/hero-image-external.png" width="1328" height="884">
-
-
-              
-            </div>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Setup Your in House AI Slack Bot for Data Analytics in Natural Language</h5>
-              <p class="card-text text-black-61">In today&amp;rsquo;s data-driven world, organizations are constantly looking for ways to make their data analysis process more efficient and streamlined. The recent surge in Large Language Model technologies has revolutionized the field of analytics by enabling natural language interactions, which gave access to data analytics to everyone.</p>
-            </div>
-          </a>
-        </div>
-        
       </div>
       <div class="row pb-5">
-        
+        <div class="col-12 d-flex justify-content-center">
+          <div class="blog-content fs-5">
+            <p>In today&rsquo;s data-driven world, organizations are constantly looking for ways to make their data analysis process more efficient and streamlined.
+The recent surge in Large Language Model technologies has revolutionized the field of analytics by enabling natural language interactions,
+which gave access to data analytics to everyone. DSensei is an open-source Slack bot that brings this technology to people by enabling
+them to request data analytics in plain English directly within their familiar instant messaging tool.</p>
+<p>Dsensei bring this to people&rsquo;s daily life
+DSensei, an open-source Slack bot, takes this a step further by providing
+users with the ability to request data analytics in plain English directly within their most familiar IM tool. See the rationale of
+Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
+<p>In this post, we&rsquo;ll walk through the steps to setup Dsensei connecting to BigQuery as its data source.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>Before we dive into the setup process please make sure you meet the following requirements:</p>
+<ul>
+<li>A Slack account with admin access to the workspace to install Dsensei</li>
+<li>An OpenAI API key (you can generate from this <a href="https://platform.openai.com/account/api-keys">link</a>)</li>
+<li>An google cloud account with <code>roles/iam.serviceAccountCreator</code> IAM role to create a service account for BigQuery (see this <a href="https://cloud.google.com/iam/docs/service-accounts-create#permissions">doc</a> for detail)</li>
+</ul>
+<h1 id="setup">Setup</h1>
+<p>Now let&rsquo;s start the setup process.</p>
+<h3 id="setup-slack-app">Setup Slack App</h3>
+<p>First let&rsquo;s create a new Slack App and install it to the workspace:</p>
+<ul>
+<li>Sign in to your Slack account in browser and navigate to <a href="https://api.slack.com/apps">https://api.slack.com/apps</a></li>
+<li>Click on the &ldquo;Create New App&rdquo; button to create a new app, and select &ldquo;From an app manifest&rdquo;.</li>
+<li>Select the workspace you want to install the app into.</li>
+<li>Inside the &ldquo;Enter app manifest below&rdquo; dialog select the format to YAML and paste the following manifest:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">display_information</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sensei</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">features</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">app_home</span>:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">home_tab_enabled</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">messages_tab_enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">messages_tab_read_only_enabled</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">bot_user</span>:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">display_name</span>: <span style="color:#ae81ff">sensei</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">always_online</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">slash_commands</span>:
+</span></span><span style="display:flex;"><span>   - <span style="color:#f92672">command</span>: <span style="color:#ae81ff">/info</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Get information about DB</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">usage_hint</span>: <span style="color:#ae81ff">/info [dbs] | [tables db] | [schema db.table]</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">should_escape</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">oauth_config</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">scopes</span>:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">bot</span>:
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">app_mentions:read</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">chat:write</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">commands</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">im:history</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">files:write</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">files:read</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">settings</span>:
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">event_subscriptions</span>:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">bot_events</span>:
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">app_mention</span>
+</span></span><span style="display:flex;"><span>     - <span style="color:#ae81ff">message.im</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">interactivity</span>:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">is_enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">org_deploy_enabled</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">socket_mode_enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">token_rotation_enabled</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="setup-bigquery-credentials">Setup BigQuery Credentials</h3>
+<p>Then let&rsquo;s create a Google Cloud Service Account Dsensei to access Bigquery:</p>
+<ul>
+<li>Sign in to your Google Cloud console in browser and navigate to <a href="https://console.cloud.google.com/iam-admin/serviceaccounts">https://console.cloud.google.com/iam-admin/serviceaccounts</a>.</li>
+<li>Select the project you want Dsensei to have access to and you should get into the service account management page.</li>
+<li>Click &ldquo;+Create service account&rdquo;.</li>
+<li>Input &ldquo;Dsensei&rdquo; to the &ldquo;Service account name&rdquo; and &ldquo;dsensei&rdquo; to the &ldquo;Service account ID&rdquo;, optionally you can also put some description. Click &ldquo;CREATE AND CONTINUE&rdquo;.
+<img src="gcp-service-account-step1.png" alt="screenshot"></li>
+<li>Grant the &ldquo;BigQuery Data Viewer&rdquo; and &ldquo;BigQuery Job User&rdquo; role to the service account and click &ldquo;Done&rdquo;.
+<img src="gcp-service-account-step2.png" alt="screenshot"></li>
+<li>Locate the newly create service account in the list, toggle the &ldquo;Action&rdquo; menu and click the &ldquo;Manage keys&rdquo; button.
+<img src="gcp-service-account-locate.png" alt="screenshot"></li>
+<li>In the &ldquo;Keys&rdquo; tab click &ldquo;ADD KEY&rdquo; -&gt; &ldquo;Create new key&rdquo; to open the key creation dialog.</li>
+<li>Inside the key creation dialog, select &ldquo;JSON&rdquo; key type and click &ldquo;CREATE&rdquo;.</li>
+<li>It should download the json file, save the json file into the proper path and we will use it later.</li>
+</ul>
+<h3 id="setup-dsensei">Setup DSensei</h3>
+<p>Now with the Slack App and BigQuery access setup, let&rsquo;s setup the Dsensei locally:</p>
+<ul>
+<li>Checkout the Dsensei repo: <code>git clone https://github.com/logunify/dsensei.git</code></li>
+<li>Switch to Node 18. You can do that with <code>nvm use 18</code>, details about nvm installation and usage can be found in this <a href="https://github.com/nvm-sh/nvm#installing-and-updating">doc</a>.</li>
+<li>Inside the checked out dsensei folder, run <code>npm install</code> to install all the dependencies.</li>
+<li>Config credentials, we provide a template on the config, you can use it by renaming <code>.env.example</code> to <code>.env</code>:
+<ul>
+<li>
+<p>Config slack credentials:</p>
+<ul>
+<li>Goto <a href="https://api.slack.com/apps">https://api.slack.com/apps</a> and select the app you just created.</li>
+<li>On the sidebar, select &ldquo;OAuth &amp; Permissions&rdquo;, and find the oauth token under &ldquo;Oauth Tokens for Your Workspace&rdquo; section. It should start with <code>xoxb-</code>. Copy the token put it under <code>SLACK_BOT_TOKEN</code> in the <code>.env</code> file.</li>
+</ul>
+<p><img src="slack-bot-token-screenshot.png" alt="screenshot"></p>
+<ul>
+<li>Then select the &ldquo;Basic Information&rdquo; on sidebar, and find the &ldquo;Signing Secret&rdquo; under the &ldquo;App Credentials&rdquo; section. Copy the secret and put it under <code>SLACK_SIGNING_SECRET</code> in the <code>.env</code> file.</li>
+</ul>
+<p><img src="signing-secret-screenshot.png" alt="screenshot"></p>
+<ul>
+<li>Finally locate &ldquo;App-Level Tokens&rdquo; section under the &ldquo;Basic Information&rdquo; tab and click the &ldquo;Generate Token and Scopes&rdquo; button to generate a app token. Add the <code>connections:write</code> scope in the dialog and click &ldquo;Generate&rdquo; to generate the token. The Slack App Token should start with <code>xapp-</code>. Copy the token and put it under <code>SLACK_APP_TOKEN</code> in the <code>.env</code> file.</li>
+</ul>
+<p><img src="app-token-screenshot.png" alt="screenshot"></p>
+</li>
+<li>
+<p>Config OpenAI API key:</p>
+<ul>
+<li>Find your OpenAI API key in this <a href="https://platform.openai.com/account/api-keys">page</a>, copy the token and put it under <code>OPENAI_API_KEY</code> in the <code>.env</code> file.</li>
+</ul>
+</li>
+<li>
+<p>Config BigQuery key:</p>
+<ul>
+<li>In the <code>.env</code> file, set <code>BQ_KEY</code> to the path to the key file we generated above for the service account, like <code>/Users/foo/gcp/dsensei.json</code></li>
+</ul>
+</li>
+<li>
+<p>[Optional] Whitelist dataset and tables.</p>
+<ul>
+<li>You might want to limit the dataset / tables this tool can access, you can do so by list the dataset in a comma separated string in the <code>DATABASES</code> field, and / or comma separated <code>dataset.tablename</code> list in the <code>TABLES</code> field.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="start-dsensei-and-verify-in-slack">Start DSensei and Verify in Slack!</h1>
+<p>That&rsquo;s it, now we should have everything setup, let&rsquo;s start Dsensei and verify it in Slack!</p>
+<ul>
+<li>[Optional] For the demo purpose, we copy a public sample <a href="https://console.cloud.google.com/bigquery?p=bigquery-public-data&amp;d=thelook_ecommerce&amp;page=dataset&amp;">ecommerce dataset</a> into our project and name it <code>ecommerce</code>.</li>
+<li>Run <code>npm run prod</code> and you should see Dsensei initialize and loading schema in the logs. In our example, in looks like below:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-04-26T23:10:00.526Z [SlackApp] info: 
+</span></span><span style="display:flex;"><span>    ____    _____                                _  
+</span></span><span style="display:flex;"><span>   / __ \  / ___/  ___    ____    _____  ___    (_)
+</span></span><span style="display:flex;"><span>  / / / /  \__ \  / _ \  / __ \  / ___/ / _ \  / /
+</span></span><span style="display:flex;"><span> / /_/ /  ___/ / /  __/ / / / / (__  ) /  __/ / /
+</span></span><span style="display:flex;"><span>/_____/  /____/  \___/ /_/ /_/ /____/  \___/ /_/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:00.529Z [DataSourceLoader] info: Use data source from BigQuery
+</span></span><span style="display:flex;"><span>[INFO]  socket-mode:SocketModeClient:0 Going to establish a new connection to Slack ...
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:00.782Z [SlackApp] info: Sensei is up running, listening on port 3000
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:00.986Z [BigQuery] info: Loaded databases: ecommerce
+</span></span><span style="display:flex;"><span>[INFO]  socket-mode:SocketModeClient:0 Now connected to Slack
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.414Z [BigQuery] info: Loaded table: ecommerce.distribution_centers
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.448Z [BigQuery] info: Loaded table: ecommerce.users
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.452Z [BigQuery] info: Loaded table: ecommerce.events
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.454Z [BigQuery] info: Loaded table: ecommerce.products
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.456Z [BigQuery] info: Loaded table: ecommerce.inventory_items
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.504Z [BigQuery] info: Loaded table: ecommerce.orders
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.529Z [BigQuery] info: Loaded table: ecommerce.order_items
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:01.530Z [BigQuery] info: All 1 databases are loaded.
+</span></span><span style="display:flex;"><span>2023-04-26T23:10:04.334Z [BigQuery] info: Enrichment finished.
+</span></span></code></pre></div><ul>
+<li>Now is the fun part, let&rsquo;s test it in Slack!:
+<ul>
+<li>
+<p>Create a new channel and add <code>sensei</code> to the channel (you can also locate the &ldquo;sensei&rdquo; under the &ldquo;Apps&rdquo; section on the left and ping it directly):
+<img src="dsensei-slack-channel.png" alt="screenshot"></p>
+</li>
+<li>
+<p>The let&rsquo;s verify we have the schemas loaded correctly by running. Send <code>/info dbs</code> to get all the database and here&rsquo;s the response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your databases: 
+</span></span><span style="display:flex;"><span>--------------------
+</span></span><span style="display:flex;"><span>ecommerce
+</span></span></code></pre></div></li>
+<li>
+<p>Send <code>/info tables ecommerce</code> to get all the tables under <code>ecommerce</code> dataset and here&rsquo;s the response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your tables in ecommerce: 
+</span></span><span style="display:flex;"><span>--------------------
+</span></span><span style="display:flex;"><span>distribution_centers
+</span></span><span style="display:flex;"><span>events
+</span></span><span style="display:flex;"><span>inventory_items
+</span></span><span style="display:flex;"><span>order_items
+</span></span><span style="display:flex;"><span>orders
+</span></span><span style="display:flex;"><span>products
+</span></span><span style="display:flex;"><span>users
+</span></span></code></pre></div></li>
+<li>
+<p>Send <code>/info schema ecommerce products</code> to get the detailed schema of the <code>products</code> table and here&rsquo;s the response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Table ecommerce.products schema:
+</span></span><span style="display:flex;"><span>name                    type     description
+</span></span><span style="display:flex;"><span>--------------------------------------------
+</span></span><span style="display:flex;"><span>                    id  INTEGER             
+</span></span><span style="display:flex;"><span>                  cost    FLOAT             
+</span></span><span style="display:flex;"><span>              category   STRING             
+</span></span><span style="display:flex;"><span>                  name   STRING             
+</span></span><span style="display:flex;"><span>                brand   STRING             
+</span></span><span style="display:flex;"><span>          retail_price    FLOAT             
+</span></span><span style="display:flex;"><span>            department   STRING             
+</span></span><span style="display:flex;"><span>                  sku   STRING             
+</span></span><span style="display:flex;"><span>distribution_center_id  INTEGER             
+</span></span></code></pre></div></li>
+<li>
+<p>Looks like all the tables are loaded correctly, let&rsquo;s test with some data questions! We can @sensei to ask data question, say we want to know the number of orders this month, we can simply just send &ldquo;@sensei how many new orders do I have this month?&rdquo; and Dsensei will respond in a thread:
+<img src="response-in-thread.png" alt="screenshot"></p>
+</li>
+<li>
+<p>We can follow up on the question with the thread, for instance we want to know how does it compared with last month. Since it memorizes the context, we can directly ask the follow up question by sending &ldquo;@sensei how does it compare with last month?&rdquo; in the thread, and we get:
+<img src="follow-up-in-thread.png" alt="screenshot"></p>
+<p>pretty cool hun?</p>
+</li>
+<li>
+<p>It can answer more vague question as well, for instance let&rsquo;s ask a class question about conversion funnel:</p>
+<p><img src="conversion-funnel.png" alt="screenshot"></p>
+</li>
+</ul>
+</li>
+<li>Now we have everything setup, enjoy your analytics with DSensei!</li>
+</ul>
+<h1 id="closing-thought">Closing Thought</h1>
+<p>In conclusion, leveraging the power of chatbots to access and analyze data can greatly improve the efficiency and effectiveness of data analysis processes in organizations. DSensei is a great open-source Slack bot that can help you achieve this goal by allowing you to access and analyze data through natural language commands. By following the steps outlined in this post, you can easily set up DSensei and link it to your BigQuery data source to start benefiting from its features.</p>
+<p>We’re passionately developing this project and would love for you to be a part of our community on <a href="https://github.com/logunify/dsensei">Discord</a> where you can receive the latest news, report bugs, and make feature requests. Please also feel free to submit any feedback on github directly.</p>
+<p>Try a live demo of DSensei in our <a href="https://join.slack.com/t/dsensei-demo/shared_invite/zt-1tt55ia3p-jMlofj8YHGnCMjuu30vJeg">Slack Channel</a></p>
+<p>Learn more about our open source project on <a href="https://github.com/logunify/dsensei/">Github</a></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
       </div>
     </div>
   </section>
