@@ -20,7 +20,7 @@
 
 
 <meta name="application-name" content="DSensei">
-<meta name="msapplication-tooltip" content="The Open Source AI Slack Bot for Data Analytics in Natural Language. Unlock the power of your data with DSensei which makes data analytics accessible to everyone."><meta name="msapplication-config" content="https://www.dsensei.app/site.webmanifest">
+<meta name="msapplication-tooltip" content="The AI Bot for Data Analytics in Natural Language. Unlock the power of your data with DSensei which makes data analytics accessible to everyone."><meta name="msapplication-config" content="https://www.dsensei.app/site.webmanifest">
 
 
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.dsensei.app/favicon-180.png">
@@ -70,7 +70,7 @@ if (!doNotTrack) {
 <meta itemprop="name" content="Setup Your in House AI Slack Bot for Data Analytics in Natural Language">
 <meta itemprop="description" content="Unlock the power of your data with DSensei which makes data analytics accessible to everyone.">
 
-<meta itemprop="wordCount" content="1493"><meta itemprop="image" content="https://www.dsensei.app/images/hero-image-external.png"/>
+<meta itemprop="wordCount" content="1490"><meta itemprop="image" content="https://www.dsensei.app/images/hero-image-external.png"/>
 <meta itemprop="keywords" content="" />
 
 
@@ -238,7 +238,7 @@ if (!doNotTrack) {
         </li>
         <li class="nav-item text-center">
           <div class="github-btn">
-            <iframe src="https://ghbtns.com/github-btn.html?user=logunify&repo=dsensei&type=star&count=true"
+            <iframe src="https://ghbtns.com/github-btn.html?user=dsensei&repo=dsensei&type=star&count=true"
               frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
           </div>
         </li>
@@ -336,7 +336,7 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
 <h3 id="step-3-setup-dsensei-service">Step 3. Setup DSensei Service</h3>
 <p>Now with the Slack App and BigQuery access setup, let&rsquo;s setup the DSensei service:</p>
 <ul>
-<li>Checkout the DSensei repo: <code>git clone https://github.com/logunify/dsensei.git</code></li>
+<li>Checkout the DSensei repo: <code>git clone https://github.com/dsensei/dsensei.git</code></li>
 <li>Switch to Node 18. You can do that with <code>nvm use 18</code>, details about nvm installation and usage can be found in this <a href="https://github.com/nvm-sh/nvm#installing-and-updating">doc</a>.</li>
 <li>Inside the checked out dsensei folder, run <code>npm install</code> to install all the dependencies.</li>
 <li>Config credentials, we provide a template on the config, you can use it by renaming <code>.env.example</code> to <code>.env</code>:
@@ -390,8 +390,8 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </li>
 <li>Run <code>npm run prod</code> to start DSensei service. You should see DSensei initialize and loading schema in the logs. In our example, in looks like below:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-04-26T23:10:00.526Z [SlackApp] info: 
-</span></span><span style="display:flex;"><span>    ____    _____                                _  
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-04-26T23:10:00.526Z [SlackApp] info:
+</span></span><span style="display:flex;"><span>    ____    _____                                _
 </span></span><span style="display:flex;"><span>   / __ \  / ___/  ___    ____    _____  ___    (_)
 </span></span><span style="display:flex;"><span>  / / / /  \__ \  / _ \  / __ \  / ___/ / _ \  / /
 </span></span><span style="display:flex;"><span> / /_/ /  ___/ / /  __/ / / / / (__  ) /  __/ / /
@@ -420,13 +420,13 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </li>
 <li>
 <p>We start with commands to verify that schemas have been loaded. Send <code>/info dbs</code> to get all the database and here&rsquo;s the response:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your databases: 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your databases:
 </span></span><span style="display:flex;"><span>--------------------
 </span></span><span style="display:flex;"><span>ecommerce
 </span></span></code></pre></div></li>
 <li>
 <p>Send <code>/info tables ecommerce</code> to get all the tables under <code>ecommerce</code> dataset and here&rsquo;s the response:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your tables in ecommerce: 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Your tables in ecommerce:
 </span></span><span style="display:flex;"><span>--------------------
 </span></span><span style="display:flex;"><span>distribution_centers
 </span></span><span style="display:flex;"><span>events
@@ -441,15 +441,15 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Table ecommerce.products schema:
 </span></span><span style="display:flex;"><span>name                    type     description
 </span></span><span style="display:flex;"><span>--------------------------------------------
-</span></span><span style="display:flex;"><span>                    id  INTEGER             
-</span></span><span style="display:flex;"><span>                  cost    FLOAT             
-</span></span><span style="display:flex;"><span>              category   STRING             
-</span></span><span style="display:flex;"><span>                  name   STRING             
-</span></span><span style="display:flex;"><span>                brand   STRING             
-</span></span><span style="display:flex;"><span>          retail_price    FLOAT             
-</span></span><span style="display:flex;"><span>            department   STRING             
-</span></span><span style="display:flex;"><span>                  sku   STRING             
-</span></span><span style="display:flex;"><span>distribution_center_id  INTEGER             
+</span></span><span style="display:flex;"><span>                    id  INTEGER
+</span></span><span style="display:flex;"><span>                  cost    FLOAT
+</span></span><span style="display:flex;"><span>              category   STRING
+</span></span><span style="display:flex;"><span>                  name   STRING
+</span></span><span style="display:flex;"><span>                brand   STRING
+</span></span><span style="display:flex;"><span>          retail_price    FLOAT
+</span></span><span style="display:flex;"><span>            department   STRING
+</span></span><span style="display:flex;"><span>                  sku   STRING
+</span></span><span style="display:flex;"><span>distribution_center_id  INTEGER
 </span></span></code></pre></div></li>
 <li>
 <p>After verify the schemas are loaded, we will test with some data questions. Say we want to know the number of orders this month, we can simply just send &ldquo;<code>@sensei how many new orders do I have this month?</code>&rdquo; and DSensei will respond in a thread:</p>
@@ -470,9 +470,9 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </ul>
 <h1 id="closing-thought">Closing Thought</h1>
 <p>In conclusion, leveraging the power of chatbot to access and analyze data can greatly improve the efficiency and effectiveness of data analysis processes in organizations. DSensei is a great open-source Slack bot that can help you achieve this goal by allowing you to access and analyze data through natural language commands. By following the steps outlined in this post, you can easily set up DSensei and link it to your BigQuery data source to start benefiting from its features.</p>
-<p>We’re passionately developing this project and would love for you to be a part of our community on <a href="https://github.com/logunify/dsensei">Discord</a> where you can receive the latest news, report bugs, and make feature requests. Please also feel free to submit any feedback on github directly.</p>
-<p>Try a live demo of DSensei in our <a href="https://join.slack.com/t/dsensei-demo/shared_invite/zt-1tt55ia3p-jMlofj8YHGnCMjuu30vJeg">Slack Channel</a></p>
-<p>Learn more about our open source project on <a href="https://github.com/logunify/dsensei/">Github</a></p>
+<p>We’re passionately developing this project and would love for you to be a part of our community on <a href="https://github.com/dsensei/dsensei">Discord</a> where you can receive the latest news, report bugs, and make feature requests. Please also feel free to submit any feedback on github directly.</p>
+<p>Try a live demo of DSensei <a href="https://demo.dsensei.app/">here</a></p>
+<p>Learn more about our open source project on <a href="https://github.com/dsensei/dsensei/">Github</a></p>
 
           </div>
         </div>
@@ -497,7 +497,7 @@ DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
           
           <li class="">
             <a class="small text-white text-decoration-none"
-              href="https://github.com/logunify/dsensei/blob/main/README.md" target="_blank">Document</a>
+              href="https://github.com/dsensei/dsensei/blob/main/README.md" target="_blank">Document</a>
           </li>
         </ul>
       </div>
