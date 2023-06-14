@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DSensei</title>
-    <link>https://www.dsensei.dev/</link>
+    <link>https://www.dsensei.app/</link>
     <description>Recent content on DSensei</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dsensei.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dsensei.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Privacy Policy</title>
-      <link>https://www.dsensei.dev/privacy-policy/</link>
+      <link>https://www.dsensei.app/privacy-policy/</link>
       <pubDate>Fri, 28 Apr 2023 18:26:24 -0700</pubDate>
       
-      <guid>https://www.dsensei.dev/privacy-policy/</guid>
+      <guid>https://www.dsensei.app/privacy-policy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rationale of DSensei</title>
-      <link>https://www.dsensei.dev/blog/rational-of-dsensei/</link>
+      <link>https://www.dsensei.app/blog/rational-of-dsensei/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.dsensei.dev/blog/rational-of-dsensei/</guid>
+      <guid>https://www.dsensei.app/blog/rational-of-dsensei/</guid>
       <description>In today’s data-driven world, having efficient access to data and analytics is critical for success. However, making data accessible to everyone can be a challenge because raw data is typically not readily consumable.</description>
     </item>
     
     <item>
       <title>Setup Your in House AI Slack Bot for Data Analytics in Natural Language</title>
-      <link>https://www.dsensei.dev/blog/setup-in-house-slack-bot-for-data-analytics/</link>
+      <link>https://www.dsensei.app/blog/setup-in-house-slack-bot-for-data-analytics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.dsensei.dev/blog/setup-in-house-slack-bot-for-data-analytics/</guid>
+      <guid>https://www.dsensei.app/blog/setup-in-house-slack-bot-for-data-analytics/</guid>
       <description>In today&amp;rsquo;s data-driven world, organizations are constantly looking for ways to make their data analysis process more efficient and streamlined. The recent surge in Large Language Model technologies has revolutionized the field of analytics by enabling natural language interactions, which gave access to data analytics to everyone.</description>
     </item>
     
