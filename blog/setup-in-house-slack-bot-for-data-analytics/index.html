@@ -265,11 +265,11 @@ if (!doNotTrack) {
 The recent surge in Large Language Model technologies has revolutionized the field of analytics by enabling natural language interactions,
 which gave access to data analytics to everyone. DSensei is an open-source Slack bot that connects this technology with people by enabling
 them to request data analytics in plain English directly within their familiar instant messaging tool. See the full rationale of
-Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
-<p>In this post, we&rsquo;ll walk through the steps to setup Dsensei connecting to BigQuery as its data source.</p>
+DSensei <a href="/post/rational-of-dsensei">here</a>.</p>
+<p>In this post, we&rsquo;ll walk through the steps to setup DSensei connecting to BigQuery as its data source.</p>
 <h1 id="prerequisites">Prerequisites</h1>
 <ul>
-<li>A Slack account with admin access to the workspace to install Dsensei</li>
+<li>A Slack account with admin access to the workspace to install DSensei</li>
 <li>An OpenAI API key (you can generate from this <a href="https://platform.openai.com/account/api-keys">link</a>)</li>
 <li>A Google Cloud account with <code>roles/iam.serviceAccountCreator</code> IAM role to create a service account for BigQuery (see this <a href="https://cloud.google.com/iam/docs/service-accounts-create#permissions">doc</a> for detail)</li>
 </ul>
@@ -318,12 +318,12 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </span></span><span style="display:flex;"><span> <span style="color:#f92672">socket_mode_enabled</span>: <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span> <span style="color:#f92672">token_rotation_enabled</span>: <span style="color:#66d9ef">false</span>
 </span></span></code></pre></div><h3 id="step-2-setup-bigquery-credentials">Step 2. Setup BigQuery Credentials</h3>
-<p>Then let&rsquo;s create a Google Cloud Service Account Dsensei to access Bigquery:</p>
+<p>Then let&rsquo;s create a Google Cloud Service Account DSensei to access Bigquery:</p>
 <ul>
 <li>Sign in to your Google Cloud console in browser and navigate to <a href="https://console.cloud.google.com/iam-admin/serviceaccounts">https://console.cloud.google.com/iam-admin/serviceaccounts</a>.</li>
-<li>Select the project you want Dsensei to have access to and you should get into the service account management page.</li>
+<li>Select the project you want DSensei to have access to and you should get into the service account management page.</li>
 <li>Click &ldquo;+Create service account&rdquo;.</li>
-<li>Input &ldquo;Dsensei&rdquo; to the &ldquo;Service account name&rdquo; and &ldquo;dsensei&rdquo; to the &ldquo;Service account ID&rdquo;, optionally you can also put some description. Click &ldquo;CREATE AND CONTINUE&rdquo;.
+<li>Input &ldquo;DSensei&rdquo; to the &ldquo;Service account name&rdquo; and &ldquo;dsensei&rdquo; to the &ldquo;Service account ID&rdquo;, optionally you can also put some description. Click &ldquo;CREATE AND CONTINUE&rdquo;.
 <img src="gcp-service-account-step1.png" alt="screenshot"></li>
 <li>Grant the &ldquo;BigQuery Data Viewer&rdquo; and &ldquo;BigQuery Job User&rdquo; role to the service account and click &ldquo;Done&rdquo;.
 <img src="gcp-service-account-step2.png" alt="screenshot"></li>
@@ -334,9 +334,9 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 <li>It should download the json file, save the json file into the proper path and we will use it later.</li>
 </ul>
 <h3 id="step-3-setup-dsensei-service">Step 3. Setup DSensei Service</h3>
-<p>Now with the Slack App and BigQuery access setup, let&rsquo;s setup the Dsensei service:</p>
+<p>Now with the Slack App and BigQuery access setup, let&rsquo;s setup the DSensei service:</p>
 <ul>
-<li>Checkout the Dsensei repo: <code>git clone https://github.com/logunify/dsensei.git</code></li>
+<li>Checkout the DSensei repo: <code>git clone https://github.com/logunify/dsensei.git</code></li>
 <li>Switch to Node 18. You can do that with <code>nvm use 18</code>, details about nvm installation and usage can be found in this <a href="https://github.com/nvm-sh/nvm#installing-and-updating">doc</a>.</li>
 <li>Inside the checked out dsensei folder, run <code>npm install</code> to install all the dependencies.</li>
 <li>Config credentials, we provide a template on the config, you can use it by renaming <code>.env.example</code> to <code>.env</code>:
@@ -378,7 +378,7 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </li>
 </ul>
 <h1 id="start-dsensei-and-verify-in-slack">Start DSensei and Verify in Slack!</h1>
-<p>That&rsquo;s it, now we should have everything setup, let&rsquo;s start Dsensei and verify it in Slack!</p>
+<p>That&rsquo;s it, now we should have everything setup, let&rsquo;s start DSensei and verify it in Slack!</p>
 <ul>
 <li>[Optional] For the demo purpose, we copy a public sample <a href="https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce">ecommerce dataset</a> into our BigQuery project and name it <code>ecommerce</code>:
 <ul>
@@ -388,7 +388,7 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 <li>Click &ldquo;CREATE DATASET&rdquo;</li>
 </ul>
 </li>
-<li>Run <code>npm run prod</code> to start Dsensei service. You should see Dsensei initialize and loading schema in the logs. In our example, in looks like below:</li>
+<li>Run <code>npm run prod</code> to start DSensei service. You should see DSensei initialize and loading schema in the logs. In our example, in looks like below:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>2023-04-26T23:10:00.526Z [SlackApp] info: 
 </span></span><span style="display:flex;"><span>    ____    _____                                _  
@@ -412,7 +412,7 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </span></span><span style="display:flex;"><span>2023-04-26T23:10:01.530Z [BigQuery] info: All 1 databases are loaded.
 </span></span><span style="display:flex;"><span>2023-04-26T23:10:04.334Z [BigQuery] info: Enrichment finished.
 </span></span></code></pre></div><ul>
-<li>Now is the fun part, let&rsquo;s play around with Dsensei in Slack:
+<li>Now is the fun part, let&rsquo;s play around with DSensei in Slack:
 <ul>
 <li>
 <p>Create a new channel and add <code>sensei</code> to the channel (you can also locate the &ldquo;sensei&rdquo; under the &ldquo;Apps&rdquo; section on the left and ping it directly):
@@ -452,11 +452,11 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
 </span></span><span style="display:flex;"><span>distribution_center_id  INTEGER             
 </span></span></code></pre></div></li>
 <li>
-<p>After verify the schemas are loaded, we will test with some data questions. Say we want to know the number of orders this month, we can simply just send &ldquo;<code>@sensei how many new orders do I have this month?</code>&rdquo; and Dsensei will respond in a thread:</p>
+<p>After verify the schemas are loaded, we will test with some data questions. Say we want to know the number of orders this month, we can simply just send &ldquo;<code>@sensei how many new orders do I have this month?</code>&rdquo; and DSensei will respond in a thread:</p>
 <p><img src="response-in-thread.png" alt="screenshot"></p>
 </li>
 <li>
-<p>We can follow up with Dsensei within the thread, for instance with the number of orders we have this month, we want to know how does it compared with last month. Dsensei will memorize context of all conversation with the thread so we can directly ask the follow up question by sending &ldquo;<code>@sensei how does it compare with last month?</code>&rdquo; in the thread, and we get:</p>
+<p>We can follow up with DSensei within the thread, for instance with the number of orders we have this month, we want to know how does it compared with last month. DSensei will memorize context of all conversation with the thread so we can directly ask the follow up question by sending &ldquo;<code>@sensei how does it compare with last month?</code>&rdquo; in the thread, and we get:</p>
 <p><img src="follow-up-in-thread.png" alt="screenshot"></p>
 <p>pretty cool huh?</p>
 </li>
@@ -527,7 +527,7 @@ Dsensei <a href="/post/rational-of-dsensei">here</a>.</p>
     <div class="row">
       <div class="col-12">
         
-        <p class="small text-white text-center">© 2023 Dsensei All Rights Reserved</p>
+        <p class="small text-white text-center">© 2023 DSensei All Rights Reserved</p>
         
       </div>
     </div>
